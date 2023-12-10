@@ -24,7 +24,8 @@
     "db:migrate": "npx prisma migrate dev",
     "db:migrate:status": "npx prisma migrate status",
     "db:migrate:deploy": "npx prisma migrate deploy",
-    "reset-db": "prisma migrate reset"
+    "reset-db": "prisma migrate reset",
+    "loadtest:socket":"npx artillery run my-scenario.yml"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
