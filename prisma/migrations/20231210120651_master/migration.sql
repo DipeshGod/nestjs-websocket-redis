@@ -4,6 +4,7 @@ CREATE TABLE `Users` (
     `name` VARCHAR(191) NOT NULL,
     `email` VARCHAR(191) NOT NULL,
     `password` VARCHAR(191) NOT NULL,
+    `type` ENUM('single_room_user', 'multi_room_user') NOT NULL DEFAULT 'single_room_user',
 
     UNIQUE INDEX `Users_email_key`(`email`),
     PRIMARY KEY (`id`)
