@@ -1,25 +1,6 @@
 version: '3.8'
 
 services:
-  nestjs-app:
-    container_name: my-nest-app
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
-    environment:
-      - NODE_ENV=production
-      - DATABASE_URL=mysql://root:root@host.docker.internal:3306/nestjs-websocket-redis #mysql is running in your computer
-      - JWT_SECRET=thisisverysekretkey
-    restart: unless-stopped
-    # Add resource limits here if needed
-    deploy:
-      resources:
-        limits:
-          cpus: '2.0'
-          memory: '2048M'
-
   redis:
     image: redis:7.0-alpine
     ports:
