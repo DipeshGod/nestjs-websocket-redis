@@ -25,7 +25,7 @@
     "db:migrate:status": "npx prisma migrate status",
     "db:migrate:deploy": "npx prisma migrate deploy",
     "reset-db": "prisma migrate reset",
-    "loadtest:socket":"npx artillery run my-scenario.yml"
+    "loadtest:socket": "npx artillery run my-scenario.yml"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -43,6 +43,7 @@
     "class-validator": "^0.14.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
+    "redis": "^4.6.11",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },

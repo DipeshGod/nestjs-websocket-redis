@@ -17,5 +17,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '512M'
+          cpus: '2.0'
+          memory: '2048M'
+
+  redis:
+    image: redis:7.0-alpine
+    ports:
+      - '6379:6379'
+    healthcheck:
+      test: ['CMD', 'redis-cli', '--raw', 'incr', 'ping']
+    volumes:
+      - ./.tmp/redis-data:/data
